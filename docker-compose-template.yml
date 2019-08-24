@@ -1,0 +1,18 @@
+version: "3"
+services:
+    db:
+        ports:
+          - "#{sql_port}:1433"
+        image: "mssql-fts-ha:latest"
+        env_file: .env
+        volumes:
+            - #{sql_data_path}:/var/opt/mssql
+    seq:
+      image: datalust/seq:latest
+      environment:
+        - "ACCEPT_EULA=Y"
+      volumes:
+        - #{seq_data_path}:/data
+      ports:
+        - "#{seq_port}:80"
+        - "5341:5341"
