@@ -11,7 +11,7 @@ chmod +x ./*.sh
 ### Software Pre-requisites
 
 These scripts assume you have the following installed
-- Docker CE
+- [Docker CE](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1)
 - [docker-compose](https://docs.docker.com/compose/install/) 
 
 ### Workflow
