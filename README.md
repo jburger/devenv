@@ -1,16 +1,22 @@
 # Docker dev environment
 
-You can use the supplied scripts to install a working environment on your system. Please review them all before running them. You'll need to mark them as executable too:
+## What you get
+Run these scripts to manager
+- a container running SQL server with full text search, persisting to your host folders, to a location of your choosing
+- a Seq logging instance also persisting to your hosts folders
+
+Please review these scripts before running them. You'll need to mark them as executable too:
 
 ```sh
 git clone https://github.com/<repo> 
 cd /your/repo/dir
-chmod +x ./*.sh
+chmod +x *.sh
 ```
 
 ### Software Pre-requisites
+These are bash scripts that have been tested on Ubuntu 18.04
 
-These scripts assume you have the following installed
+These scripts also assume you have the following installed
 - [Docker CE](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1)
 - [docker-compose](https://docs.docker.com/compose/install/) 
 
@@ -27,4 +33,4 @@ Run `start.sh` to start the environment in the background, it will bring up a st
 If you want to halt your environment, just run `stop.sh`
 
 #### Start over
-To blow it all away, run `clean.sh`. This will halt all containers, remove the containers that it created, **AND DELETE THE DATA IN YOUR DATA DIRECTORIES** it doesn't delete the container images though.
+To blow it all away, run `clean.sh`. This will halt all containers, remove the containers that it created, **AND DELETE THE DATA IN YOUR DATA DIRECTORIES** it doesn't delete the container images by default, leaving those for next time. 
