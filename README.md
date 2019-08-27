@@ -1,9 +1,10 @@
 # Docker dev environment
 
 ## What you get
-Run these scripts to manager
+
 - a container running SQL server with full text search, persisting to your host folders, to a location of your choosing
 - a Seq logging instance also persisting to your hosts folders
+- a set of convenience scripts to spin up and tear down this environment
 
 Please review these scripts before running them. You'll need to mark them as executable too:
 
