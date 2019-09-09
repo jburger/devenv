@@ -16,7 +16,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     # Install SQL Server from apt
     apt-get install -y mssql-server && \
     # Install optional packages
-    apt-get install -y mssql-server-ha && \
+    # apt-get install -y mssql-server-ha && \
     apt-get install -y mssql-server-fts && \
     # Cleanup the Dockerfile
     apt-get clean && \
