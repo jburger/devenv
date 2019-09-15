@@ -6,7 +6,7 @@ NC=$'\e[0m'
 default_data_path=$HOME/.devenv
 default_sql_port=1433
 default_seq_port=8081
-
+env=.env
 read -p "${ORANGE}Which host port do you want SQL to listen on?${NC} [$default_sql_port] " sql_port
 
 if [ -z "$sql_port" ]; then
@@ -45,7 +45,10 @@ fi
 mkdir -p $sql_data_path
 mkdir -p $seq_data_path
 
-rm ./.env
+if [ -f "$env" ]; then
+	rm $env
+fi
+
 printf "SA_PASSWORD=$sql_pass\nACCEPT_EULA=true\nMSSQL_PID=Developer" > ./.env 
 
 echo "creating .config"
