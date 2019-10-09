@@ -5,7 +5,7 @@ GREEN=$'\e[0;32m'
 NC=$'\e[0m'
 default_data_path=$HOME/.devenv
 default_sql_port=1433
-default_seq_port=8081
+default_seq_port=5341
 env=.env
 read -p "${ORANGE}Which host port do you want SQL to listen on?${NC} [$default_sql_port] " sql_port
 
