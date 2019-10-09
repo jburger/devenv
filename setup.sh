@@ -63,12 +63,12 @@ sed -i -e "s/#{sql_port}/$sql_port/g" ./docker-compose.yml
 sed -i -e "s/#{seq_port}/$seq_port/g" ./docker-compose.yml
 
 echo -e "${ORANGE}Building containers...${NC}"
-docker build --tag=mssql-fts-ha . 
+sudo docker build --tag=mssql-fts-ha . 
 echo -e "${GREEN}Finished. Do you want me bring it all up?${NC} [yes/no]"
 read continue
 if [ "$continue" == "yes" ]; then
-	docker-compose up -d
-	docker stats
+	sudo docker-compose up -d
+	sudo docker stats
 else
 	echo -e "${GREEN}No probs, you can start it all up yourself with start.sh${NC}"
 fi
