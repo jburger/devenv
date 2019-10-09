@@ -15,4 +15,3 @@ services:
         - #{seq_data_path}:/data
       ports:
         - "#{seq_port}:80"
-        - "5341:5341"
