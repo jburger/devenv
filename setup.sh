@@ -5,7 +5,7 @@ GREEN=$'\e[0;32m'
 NC=$'\e[0m'
 default_data_path=$HOME/.devenv
 default_sql_port=1433
-default_seq_port=8081
+default_seq_port=5341
 env=.env
 read -p "${ORANGE}Which host port do you want SQL to listen on?${NC} [$default_sql_port] " sql_port
 
@@ -63,12 +63,12 @@ sed -i -e "s/#{sql_port}/$sql_port/g" ./docker-compose.yml
 sed -i -e "s/#{seq_port}/$seq_port/g" ./docker-compose.yml
 
 echo -e "${ORANGE}Building containers...${NC}"
-docker build --tag=mssql-fts-ha . 
+sudo docker build --tag=mssql-fts-ha . 
 echo -e "${GREEN}Finished. Do you want me bring it all up?${NC} [yes/no]"
 read continue
 if [ "$continue" == "yes" ]; then
-	docker-compose up -d
-	docker stats
+	sudo docker-compose up -d
+	sudo docker stats
 else
 	echo -e "${GREEN}No probs, you can start it all up yourself with start.sh${NC}"
 fi
