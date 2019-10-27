@@ -34,4 +34,6 @@ Run `start.sh` to start the environment in the background, it will bring up a st
 If you want to halt your environment, just run `stop.sh`
 
 #### Clean
-To blow it all away, run `clean.sh`. This will halt all containers, remove the containers that it created, **AND DELETE THE DATA IN YOUR DATA DIRECTORIES** it doesn't delete the container images by default, leaving those for next time. 
+To blow it all away, run `clean.sh`. This will halt all containers, remove the containers that it created, **AND DELETE THE DATA IN YOUR DATA DIRECTORIES** it doesn't delete the container images, leaving those for next time. 
+
+[![asciicast](https://asciinema.org/a/AUXSaRj6hfqQS1QQqflrITrX0.svg)](https://asciinema.org/a/AUXSaRj6hfqQS1QQqflrITrX0)
