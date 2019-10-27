@@ -20,10 +20,4 @@ fi
 echo -e "${GREEN}OK... Deleting $data_path!${GREEN}"
 sudo rm -rf $data_path
 
-read -p "${ORANGE}Want to remove the SQL and SEQ images too?${NC} [yes/no] "
-if [ "$answer" == "yes" ]; then
-	echo -e "${RED}OK... Deleting images!${NC}"
-	sudo docker rmi mssql-fts-ha:latest datalust/seq:latest
-fi
-
 echo -e "${GREEN}All cleaned up!${NC}"

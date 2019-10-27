@@ -62,8 +62,8 @@ sed -i -e "s+#{seq_data_path}+$seq_data_path+g" ./docker-compose.yml
 sed -i -e "s/#{sql_port}/$sql_port/g" ./docker-compose.yml
 sed -i -e "s/#{seq_port}/$seq_port/g" ./docker-compose.yml
 
-echo -e "${ORANGE}Building containers...${NC}"
-sudo docker build --tag=mssql-fts-ha . 
+# echo -e "${ORANGE}Building containers...${NC}"
+# sudo docker build --tag=mssql-fts-ha . 
 echo -e "${GREEN}Finished. Do you want me bring it all up?${NC} [yes/no]"
 read continue
 if [ "$continue" == "yes" ]; then
