@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 GREEN=$'\e[0;32m'
 NC=$'\e[0m'
